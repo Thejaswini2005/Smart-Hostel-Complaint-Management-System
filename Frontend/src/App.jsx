@@ -1,27 +1,37 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Login from "./pages/login";
 import Register from "./pages/register";
 
 import StudentDashboard from "./pages/student/StudentDashboard";
-
 import CreateComplaint from "./pages/student/CreateComplaint";
-
 import MyComplaints from "./pages/student/MyComplaints";
-
 import StudentProfile from "./pages/student/StudentProfile";
 
 import WardenDashboard from "./pages/wardern/WardenDashboard";
-
 import ManageComplaints from "./pages/wardern/ManageComplaints";
-
 import WardenProfile from "./pages/wardern/WardenProfile";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
+
+        {/* Default Route */}
+        <Route
+          path="/"
+          element={<Navigate to="/login" />}
+        />
+
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
         <Route
           path="/register"
@@ -62,6 +72,7 @@ function App() {
           path="/warden/profile"
           element={<WardenProfile />}
         />
+
       </Routes>
     </BrowserRouter>
   );

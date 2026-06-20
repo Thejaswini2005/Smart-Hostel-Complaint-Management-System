@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./StudentDashboard.CSS";
+import "./StudentDashboard.css";
 
 import Sidebar from "../../components/Sidebar";
 import Navbar from "../../components/Navbar";

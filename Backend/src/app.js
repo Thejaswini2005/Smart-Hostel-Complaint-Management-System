@@ -8,4 +8,8 @@ app.use(express.json());
 app.use("/complaints", complaintRoutes);
 app.use("/api/auth", authRoutes);
 
+app.get("/", (req, res) => {
+  res.send("HostelCare Backend Running Successfully 🚀");
+});
+
 module.exports = app;

@@ -1,0 +1,106 @@
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 220px;
+  height: 100vh;
+
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1001;
+}
+
+/* Top Section */
+.sidebar-top {
+  padding: 20px 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 4px;
+}
+
+.sidebar-top p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Navigation */
+.sidebar-nav {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 16px 12px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #0f172a;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  padding: 12px 14px;
+  border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  background: #f1f5f9;
+}
+
+.sidebar-nav a.active {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* Logout */
+.logout-btn {
+  padding: 16px;
+  border-top: 1px solid #e2e8f0;
+
+  color: #ef4444;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #fef2f2;
+}
+
+/* Scroll only if sidebar content becomes large */
+.sidebar-nav {
+  overflow-y: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .sidebar-nav a {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}

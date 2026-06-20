@@ -1,0 +1,202 @@
+/* =========================
+   Container
+========================= */
+
+.warden-dashboard-container {
+  margin-top: 80px;
+  padding: 20px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.dashboard-header p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+/* =========================
+   Stats
+========================= */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.stat-card h2 {
+  font-size: 30px;
+  color: #0f172a;
+}
+
+.pending-card {
+  border-left: 5px solid #f59e0b;
+}
+
+.progress-card {
+  border-left: 5px solid #2563eb;
+}
+
+.resolved-card {
+  border-left: 5px solid #22c55e;
+}
+
+/* =========================
+   Pending Complaints
+========================= */
+
+.recent-section h2 {
+  font-size: 28px;
+  color: #0f172a;
+  margin-bottom: 18px;
+}
+
+.recent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+/* =========================
+   Complaint Card
+========================= */
+
+.recent-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 16px;
+  min-height: 220px;
+
+  transition: 0.3s ease;
+}
+
+.recent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.recent-card h3 {
+  font-size: 18px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.recent-card p {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.student-details {
+  font-size: 14px;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.student-details strong {
+  color: #0f172a;
+}
+
+/* =========================
+   Status Badge
+========================= */
+
+.status-badge {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  background: #dbeafe;
+  color: #2563eb;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.empty-state {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 30px;
+  text-align: center;
+
+  grid-column: 1 / -1;
+}
+
+.empty-state h3 {
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #64748b;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .warden-dashboard-container {
+    padding: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+}

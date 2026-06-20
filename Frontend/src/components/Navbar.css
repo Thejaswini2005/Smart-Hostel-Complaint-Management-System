@@ -1,0 +1,93 @@
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 220px; /* sidebar width */
+
+  width: calc(100% - 220px);
+  height: 75px;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 24px;
+  box-sizing: border-box;
+
+  z-index: 1000;
+}
+
+/* Left Side */
+.navbar-left h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.navbar-left p {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Right Side */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+/* Avatar */
+.navbar-avatar {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+/* User Info */
+.user-info h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.user-info p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    left: 200px;
+    width: calc(100% - 200px);
+    padding: 0 16px;
+  }
+
+  .navbar-left h2 {
+    font-size: 20px;
+  }
+
+  .user-info {
+    display: none;
+  }
+}

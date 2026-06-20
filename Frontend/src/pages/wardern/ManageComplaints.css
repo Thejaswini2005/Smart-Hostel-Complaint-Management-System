@@ -1,0 +1,247 @@
+/* =========================
+   Layout
+========================= */
+
+.manage-container {
+  margin-top: 90px;
+  padding: 24px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+/* =========================
+   Header
+========================= */
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+/* =========================
+   Filter Tabs
+========================= */
+
+.filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #a78bfa;
+  color: white;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.filter-tabs button:hover {
+  opacity: 0.9;
+}
+
+.filter-tabs button.active {
+  background: #2563eb;
+}
+
+/* =========================
+   Complaints Grid
+========================= */
+
+.complaints-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
+  gap: 16px;
+}
+
+/* =========================
+   Complaint Card
+========================= */
+
+.complaint-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 16px;
+  min-height: 220px;
+
+  transition: all 0.3s ease;
+}
+
+.complaint-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 6px 16px rgba(
+    0,
+    0,
+    0,
+    0.08
+  );
+}
+
+/* =========================
+   Card Header
+========================= */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 14px;
+}
+
+.card-header h3 {
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-header select {
+  padding: 8px 12px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  background: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  min-width: 130px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Resolved Dropdown
+========================= */
+
+.resolved-select {
+  background: #dcfce7;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+  font-weight: 600;
+  cursor: not-allowed;
+}
+
+/* =========================
+   Description
+========================= */
+
+.complaint-card p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+
+  margin-bottom: 14px;
+}
+
+/* =========================
+   Student Info
+========================= */
+
+.student-info {
+  font-size: 14px;
+  color: #334155;
+
+  margin-bottom: 6px;
+}
+
+.student-info strong {
+  color: #0f172a;
+}
+
+/* =========================
+   Footer
+========================= */
+
+.card-footer {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 12px;
+
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.empty-state {
+  width: 100%;
+  text-align: center;
+
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  padding: 40px 20px;
+}
+
+.empty-state h3 {
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #64748b;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .manage-container {
+    padding: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 28px;
+  }
+
+  .complaints-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-header select {
+    width: 100%;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

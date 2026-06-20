@@ -1,0 +1,144 @@
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login-left {
+  flex: 1;
+  background: linear-gradient(135deg, #3f73e3, #021857);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.login-content {
+  max-width: 450px;
+}
+
+.login-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.login-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.login-content ul {
+  list-style: none;
+}
+
+.login-content ul li {
+  margin-bottom: 12px;
+  font-size: 17px;
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  width: 420px;
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.login-form h2 {
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+.login-form h1 {
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.login-form button:hover {
+  background: #1d4ed8;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.register-link a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .register-container,
+  .login-container {
+    flex-direction: column;
+  }
+
+  .register-left,
+  .login-left {
+    display: none;
+  }
+
+  .register-form,
+  .login-form {
+    width: 90%;
+    margin: 30px auto;
+  }
+}

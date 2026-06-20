@@ -27,11 +27,19 @@ const createComplaint = async (req, res) => {
 
 const getComplaints = async (req, res) => {
     try {
-        const complaints = await Complaint.find( {studentId: req.user.userId});
+
+        const complaints = await Complaint.find({
+            studentId: req.user.userId
+        }).sort({ createdAt: -1 });
+
         res.status(200).json(complaints);
-    }
-    catch (error) {
-        res.status(500).json({ message: "Error fetching complaints", error: error.message });
+
+    } catch (error) {
+
+        res.status(500).json({
+            message: "Error fetching complaints",
+            error: error.message
+        });
     }
 };
 

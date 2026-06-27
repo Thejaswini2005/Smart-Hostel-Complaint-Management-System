@@ -1,5 +1,12 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
+import {
+  RiDashboardLine,
+  RiAddLine,
+  RiFileListLine,
+  RiUserLine,
+  RiLogoutCircleLine,
+} from "react-icons/ri";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -26,19 +33,19 @@ const Sidebar = () => {
       <nav className="sidebar-nav">
 
         <NavLink to="/student/dashboard">
-          📊 Dashboard
+          <RiDashboardLine /> Dashboard
         </NavLink>
 
         <NavLink to="/student/create-complaint">
-          + Create Complaint
+          <RiAddLine /> Create Complaint
         </NavLink>
 
         <NavLink to="/student/my-complaints">
-          📋 My Complaints
+          <RiFileListLine /> My Complaints
         </NavLink>
 
         <NavLink to="/student/profile">
-          👤 {user?.role || "Profile"}
+          <RiUserLine /> {user?.role || "Profile"}
         </NavLink>
 
       </nav>
@@ -47,7 +54,7 @@ const Sidebar = () => {
         className="logout-btn"
         onClick={handleLogout}
       >
-        🚪 Logout
+        <RiLogoutCircleLine /> Logout
       </div>
 
     </div>
